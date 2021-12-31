@@ -6,13 +6,13 @@ pages.forEach(page => page.style.display = "none");
 
 let currentPage = 0;
 
-// Show Default Elements
+// Show Default Page and Button
 showElement(pages[currentPage]);
 if (currentPage == 0) {
   hideElement(prevButton);
 }
 
-// Functions
+// Previous and Next Buttons
 function turnPreviousPage() {
   hideElement(pages[currentPage]);
   showElement(pages[currentPage - 1]);

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.hero-text {
+    background-image: url(images/love-hero.jpg);
+    background-size: cover;
+    color: #fff;
+  
+    text-align: center;
+    font-family: 'Pushster', cursive;;
+    font-weight: 500;
+    padding: 30px 15px;
+}
+
+main .page {
+  background-image: url(images/love-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+main .page section {
+  background-color: #f7f5f5;
+  margin: 30px auto;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 40px lighten(#000, 60%);
+  width: 235px;
+}
+
+.buttons-container {
+  display: grid;
+  margin-top: -80px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.prev-button {
+  grid-column: 1 / 2;
+  cursor: pointer;
+}
+
+.next-button {
+  grid-column: 2 / 3;
+  cursor: pointer;
+}
+
+.text {
+  background-image: url(images/love-hero.jpg);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+
+  font-family: 'Pushster', cursive;;
+  font-weight: 900;
+}
+
+
+/* Heart */
+
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #990000;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
