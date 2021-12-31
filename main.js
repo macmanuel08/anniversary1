@@ -45,3 +45,10 @@ function hideElement(element) {
 
 prevButton.addEventListener('click', () => turnPreviousPage());
 nextButton.addEventListener('click', () => turnNextPage());
+
+// Question appear
+const question = document.getElementById('q');
+const templeButton = document.getElementById('templeBtn');
+templeButton.addEventListener('click', () => {
+  showElement(question);
+});

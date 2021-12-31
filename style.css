@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Pushster&display=swap');
 
 * {
   padding: 0;
@@ -9,90 +9,103 @@
 img {
   width: 100%;
 }
+.hero {
+  background-image: url(images/love-hero.jpg);
+  background-size: cover;
+  padding: 30px 15px;
+}
 
 .hero-text {
-    background-image: url(images/love-hero.jpg);
-    background-size: cover;
     color: #fff;
-  
     text-align: center;
     font-family: 'Pushster', cursive;;
     font-weight: 500;
-    padding: 30px 15px;
+    animation: float 6s ease-in-out infinite;
 }
 
 main .page {
-  background-image: url(images/love-background.jpg);
+  background-image: url(images/love-background1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right center;
   height: 100vh;
-  position: relative;
-  z-index: -1;
+  padding-top: 50px;
+  padding-left: 25px;
 }
 
 main .page section {
   background-color: #f7f5f5;
-  margin: 30px auto;
-  position: absolute;
-  top: 60px;
-  left: 30px;
-  padding: 20px;
+  padding: 15px;
   border-radius: 7px;
   box-shadow: 0 0 40px lighten(#000, 60%);
   width: 235px;
+
+  /* Font */
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+  color: #cc0000;
+
+  /* Animation */
+  animation: slide-in 1s ease-in-out;
+  
+}
+
+p, h3 {
+  margin-bottom: 1rem;
 }
 
 .buttons-container {
   display: grid;
   margin-top: -80px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 30px;
 }
 
 .prev-button {
   grid-column: 1 / 2;
   cursor: pointer;
+  width: 170px;
 }
 
 .next-button {
   grid-column: 2 / 3;
   cursor: pointer;
+  width: 170px;
 }
 
-.text {
-  background-image: url(images/love-hero.jpg);
-  background-size: cover;
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-
-  font-family: 'Pushster', cursive;;
-  font-weight: 900;
+#templeBtn {
+  width: 200px;
+  margin: 2% auto;
 }
 
-
-/* Heart */
-
-#heart {
-  position: relative;
-  width: 100px;
-  height: 90px;
+.special-message span {
+  font-weight: 600;
 }
-#heart:before,
-#heart:after {
-  position: absolute;
-  content: "";
-  left: 50px;
-  top: 0;
-  width: 50px;
-  height: 80px;
-  background: #990000;
-  border-radius: 50px 50px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
+
+#q {display: none; animation: slide-in 1s ease-in-out;}
+
+/* Floating Animation */
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
-#heart:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
+
+/* slide-in Animation */
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
